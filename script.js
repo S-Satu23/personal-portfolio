@@ -54,6 +54,48 @@ lightbox.addEventListener("click", (event) => {
   }
 });
 
+ 
+// Function to open the contact modal
+function openContactForm() {
+  console.log('openContactForm function called'); // Debugging
+  document.getElementById('contactFormModal').style.display = 'block';
+}
+
+
+    // Attach functions to the global scope
+    window.openContactForm = openContactForm;
+    window.closeContactForm = closeContactForm;
+
+// Function to close the contact modal
+function closeContactForm() {
+  console.log('closeContactForm function called'); // Debugging
+  document.getElementById('contactFormModal').style.display = 'none';
+}
+
+    // Attach functions to the global scope
+    window.openContactForm = openContactForm;
+    window.closeContactForm = closeContactForm;
+
+// Form submission handler
+document.getElementById('contactFormFields').addEventListener('submit', function (event) {
+  event.preventDefault(); // Prevent the default form submission
+
+  // Get form data
+  const name = document.getElementById('name').value;
+  const designation = document.getElementById('designation').value;
+  const contactNumber = document.getElementById('contactNumber').value;
+
+  // Debugging: Show an alert with the data
+  alert(`Submitted Details:\nName: ${name}\nDesignation: ${designation}\nContact Number: ${contactNumber}`);
+
+  // Optional: Clear form fields after submission
+  document.getElementById('contactFormFields').reset();
+
+  // Close the modal after submission
+  closeContactForm();
+});
+
+
   // Add event listener for table-link
   document.getElementById("table-link").addEventListener("click", (event) => {
     event.preventDefault();
