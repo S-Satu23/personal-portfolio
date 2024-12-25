@@ -22,6 +22,8 @@
         <li><a href="#quote" id="quote-link"><strong>Quote</strong></a></li>
         <li><a href="#images" id="images-link"><strong>Images</strong></a></li>
         <li><a href="#table" id="table-link"><strong>Table</strong></a></li>
+        <!-- Contact Me Button -->
+        <button id="contactMeButton" onclick="openContactForm()">Contact Me</button>
       </ul>
     </nav>
     
@@ -32,9 +34,9 @@
       <div class="profile-info">
         <h2>A Bit About Me</h2>
         <p>
-          I’m currently in my final semester of a Computer Science degree,  I'm at the beginning of my journey in the cybersecurity field and eager to learn and grow in this rapidly evolving area        </p>
+          I'm currently in my final semester of a Computer Science degree,  I'm at the beginning of my journey in the cybersecurity field and eager to learn and grow in this rapidly evolving area        </p>
         <p>
-          As I’m just starting, I'm excited to keep building my skills, take on challenges, and grow in a career focused on keeping information safe. I’m dedicated to making a positive impact in technology and look forward to contributing to a company that values security and innovation
+          As I'm just starting, I'm excited to keep building my skills, take on challenges, and grow in a career focused on keeping information safe. I’m dedicated to making a positive impact in technology and look forward to contributing to a company that values security and innovation
         </p>
 
       <!-- Download CV Button -->
@@ -126,6 +128,23 @@
   </div>
 </div>
 
+
+<!-- Contact Form Modal -->
+<div id="contactFormModal" class="contact-modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeContactForm()">&times;</span>
+    <h2>Contact Me</h2>
+    <form id="contactFormFields" >
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+      <label for="designation">Designation:</label>
+      <input type="text" id="designation" name="designation" required>
+      <label for="contactNumber">Contact Number:</label>
+      <input type="tel" id="contactNumber" name="contactNumber" required>
+      <button type="submit" class="submit-btn">Submit</button>
+    </form>
+  </div>
+</div>
 <!-- Lightbox Container -->
 <div id="lightbox" class="lightbox">
   <span class="close">&times;</span>
@@ -163,6 +182,7 @@
     <p id="footer-content"></p>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js" ></script>
+
 </body>
 </html>
