@@ -54,11 +54,15 @@ lightbox.addEventListener("click", (event) => {
   }
 });
 
- 
+ // Ensure the modal is hidden initially
+window.onload = () => {
+  document.getElementById('contact-form-modal').style.display = 'none';
+};
+
 // Function to open the contact modal
 function openContactForm() {
   console.log('openContactForm function called'); // Debugging
-  document.getElementById('contactFormModal').style.display = 'block';
+  document.getElementById('contactFormModal').style.display = 'flex';
 }
 
 
@@ -72,10 +76,7 @@ function closeContactForm() {
   document.getElementById('contactFormModal').style.display = 'none';
 }
 
-    // Attach functions to the global scope
-    window.openContactForm = openContactForm;
-    window.closeContactForm = closeContactForm;
-
+ 
 // Form submission handler
 document.getElementById('contactFormFields').addEventListener('submit', function (event) {
   event.preventDefault(); // Prevent the default form submission
